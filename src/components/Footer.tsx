@@ -2,10 +2,10 @@ import Link from "next/link";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/regional-vp", label: "Regional VP" },
+  { href: "/partner", label: "Partner" },
   { href: "/sellers", label: "Sellers" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" }
+  { href: "/pricing", label: "Pricing" },
+  { href: "/about", label: "About" }
 ];
 
 const legalLinks = [
@@ -27,6 +27,7 @@ export function Footer() {
             Private acquisition platform building permanent ownership in essential services.
           </p>
         </div>
+
         <div className="flex flex-wrap gap-4 text-sm text-sand/80">
           {links.map((link) => (
             <Link key={link.href} href={link.href} className="hover:text-accent">
@@ -34,6 +35,7 @@ export function Footer() {
             </Link>
           ))}
         </div>
+
         <div className="flex flex-wrap gap-4 text-sm text-sand/80 md:justify-end">
           {legalLinks.map((link) => (
             <Link key={link.href} href={link.href} className="hover:text-accent">
@@ -42,10 +44,9 @@ export function Footer() {
           ))}
         </div>
       </div>
+
       <div className="gradient-bar" />
-      <div className="section py-6 text-sm text-sand/60">
-        © 2024 HOLDRY. All rights reserved.
-      </div>
+      <div className="section py-6 text-sm text-sand/60">© 2024 HOLDRY. All rights reserved.</div>
     </footer>
   );
 }
