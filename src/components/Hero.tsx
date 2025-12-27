@@ -32,8 +32,26 @@ export function Hero({ eyebrow, title, description, cta, secondaryCta, children 
           )}
         </div>
       </div>
-      <div className="card grid-fade min-h-[260px] rounded-3xl border border-white/5 bg-midnight/60 p-8">
-        {children}
+
+      {/* Upgraded “pop” card */}
+      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-midnight/80 shadow-soft backdrop-blur">
+        {/* Accent glow */}
+        <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
+
+        {/* Header strip */}
+        <div className="flex items-center justify-between border-b border-white/10 px-8 py-5">
+          <div className="flex items-center gap-3">
+            <span className="h-2.5 w-2.5 rounded-full bg-accent" />
+            <p className="text-sm font-semibold tracking-tight text-sand">HOLDRY Advantage</p>
+          </div>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-sand/60">Highlights</p>
+        </div>
+
+        {/* Content */}
+        <div className="grid-fade p-8">
+          {children}
+        </div>
       </div>
     </section>
   );
