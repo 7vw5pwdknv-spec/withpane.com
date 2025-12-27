@@ -5,6 +5,7 @@ const navLinks = [
   { href: "/sellers", label: "Sellers" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" }
+  { href: "/pricing", label: "Pricing" },
 ];
 
 export function Navbar() {
