@@ -15,10 +15,13 @@ export function Hero({ eyebrow, title, description, cta, secondaryCta, children 
     <section className="section grid gap-10 pb-10 pt-14 md:grid-cols-2 md:items-center lg:pt-20">
       <div className="space-y-6">
         {eyebrow && <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/90">{eyebrow}</p>}
+
         <h1 className="text-3xl font-semibold leading-tight tracking-tight text-sand md:text-4xl lg:text-5xl">
           {title}
         </h1>
+
         <p className="max-w-2xl text-lg text-sand/80 md:text-xl">{description}</p>
+
         <div className="flex flex-wrap items-center gap-4">
           {cta && (
             <Link href={cta.href} className="btn-primary">
@@ -33,24 +36,16 @@ export function Hero({ eyebrow, title, description, cta, secondaryCta, children 
         </div>
       </div>
 
-      {/* Upgraded “pop” card */}
-      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-midnight/80 shadow-soft backdrop-blur">
-        {/* Accent glow */}
-        <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
+      {/* “Pop” card */}
+      <div className="relative">
+        {/* ambient glow */}
+        <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-[radial-gradient(circle_at_30%_20%,rgba(200,90,30,0.25),transparent_55%)] blur-2xl" />
 
-        {/* Header strip */}
-        <div className="flex items-center justify-between border-b border-white/10 px-8 py-5">
-          <div className="flex items-center gap-3">
-            <span className="h-2.5 w-2.5 rounded-full bg-accent" />
-            <p className="text-sm font-semibold tracking-tight text-sand">HOLDRY Advantage</p>
+        {/* gradient border */}
+        <div className="rounded-[2rem] bg-[linear-gradient(135deg,rgba(200,90,30,0.45),rgba(255,255,255,0.06),rgba(200,90,30,0.18))] p-[1px]">
+          <div className="card grid-fade min-h-[260px] rounded-[2rem] border border-white/5 bg-midnight/70 p-8 shadow-soft backdrop-blur">
+            {children}
           </div>
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-sand/60">Highlights</p>
-        </div>
-
-        {/* Content */}
-        <div className="grid-fade p-8">
-          {children}
         </div>
       </div>
     </section>
