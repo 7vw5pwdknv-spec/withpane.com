@@ -32,7 +32,11 @@ export default function HomePage() {
         secondaryCta={{ href: "/contact", label: "Speak with us" }}
       >
         <div className="space-y-5">
-          <p className="text-sm font-semibold text-sand">Proprietary edge</p>
+          <div className="space-y-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent/90">Proprietary edge</p>
+            <p className="text-lg font-semibold text-sand">Built for disciplined ownership</p>
+          </div>
+
           <div className="space-y-4 text-sm text-sand/80 leading-relaxed">
             <div className="flex gap-3">
               <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
