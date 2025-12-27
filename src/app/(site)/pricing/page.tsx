@@ -22,8 +22,8 @@ const tiers = [
       "Deal evaluation templates and checklists",
       "Weekly insights and acquisition guides"
     ],
-    ctaPrimary: { href: "/contact#apply", label: "Join waitlist" },
-    ctaSecondary: { href: "/contact", label: "Ask a question" },
+    ctaPrimary: { href: "/partner#apply", label: "Join waitlist" },
+    ctaSecondary: { href: "/partner#apply", label: "Ask a question" },
     tone: "standard"
   },
   {
@@ -39,8 +39,8 @@ const tiers = [
       "Financing guidance and lender context",
       "Structured weekly execution cadence"
     ],
-    ctaPrimary: { href: "/contact#apply", label: "Join waitlist" },
-    ctaSecondary: { href: "/contact", label: "Talk with us" },
+    ctaPrimary: { href: "/partner#apply", label: "Join waitlist" },
+    ctaSecondary: { href: "/partner#apply", label: "Talk with us" },
     tone: "featured"
   },
   {
@@ -56,8 +56,8 @@ const tiers = [
       "Aligned ownership economics",
       "Discretion-first relationship"
     ],
-    ctaPrimary: { href: "/contact#apply", label: "Apply / request review" },
-    ctaSecondary: { href: "/regional-vp", label: "View operator track" },
+    ctaPrimary: { href: "/partner#apply", label: "Apply / request review" },
+    ctaSecondary: { href: "/partner", label: "Learn more" },
     tone: "premium"
   }
 ];
@@ -102,9 +102,7 @@ function TierCard({
           </div>
 
           <p className="text-sm uppercase tracking-[0.2em] text-accent/90">{label}</p>
-
           <p className="text-3xl font-semibold text-sand">{price}</p>
-
           <p className="text-sand/75 leading-relaxed">{description}</p>
         </div>
 
@@ -140,13 +138,14 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="Choose the right path"
         description="Explorer is for learning. Searcher is for active acquisition. Partner is selective and aligned for ownership."
-        cta={{ href: "/contact#apply", label: "Join waitlist" }}
-        secondaryCta={{ href: "/contact", label: "Talk with us" }}
+        cta={{ href: "/partner#apply", label: "Join waitlist" }}
+        secondaryCta={{ href: "/partner", label: "Learn about Partner" }}
       >
         <div className="space-y-4 text-sand/80">
           <p>
-            HOLDRY is built for disciplined operators. Most serious candidates start with <span className="font-semibold text-sand">Searcher</span>,
-            then move into <span className="font-semibold text-sand">Partner</span> when fit is clear.
+            HOLDRY is built for disciplined operators. Most serious candidates start with{" "}
+            <span className="font-semibold text-sand">Searcher</span>, then move into{" "}
+            <span className="font-semibold text-sand">Partner</span> when fit is clear.
           </p>
           <p className="text-sm text-sand/70">
             Payments are not enabled yet — join the waitlist and we’ll share access details as tiers open.
@@ -169,36 +168,10 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="section space-y-6">
-        <div className="card space-y-4">
-          <h3 className="text-xl font-semibold text-sand">Which plan should I choose?</h3>
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="space-y-2">
-              <p className="text-sm font-semibold text-sand">Choose Explorer if…</p>
-              <p className="text-sm text-sand/75">
-                You’re learning the process, want frameworks, and you’re not yet running a weekly sourcing cadence.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-sm font-semibold text-sand">Choose Searcher if…</p>
-              <p className="text-sm text-sand/75">
-                You’re actively searching, evaluating opportunities, and want structured support through diligence and financing.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-sm font-semibold text-sand">Choose Partner if…</p>
-              <p className="text-sm text-sand/75">
-                You’re ready to acquire and operate, want aligned capital support, and are comfortable with performance expectations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <CTASection
         title="Join the waitlist"
         description="Tell us where you are in the journey and what you’re looking to acquire. We’ll follow up quickly and discreetly."
-        cta={{ href: "/contact#apply", label: "Join waitlist" }}
+        cta={{ href: "/partner#apply", label: "Join waitlist" }}
       />
     </div>
   );
