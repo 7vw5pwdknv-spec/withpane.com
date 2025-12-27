@@ -31,25 +31,28 @@ export default function HomePage() {
         cta={{ href: "/regional-vp", label: "Explore the Opportunity" }}
         secondaryCta={{ href: "/contact", label: "Speak with us" }}
       >
-        <div className="space-y-4 text-sm text-sand/80">
-          <div className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-accent" />
-            Proprietary intelligence across secondary and emerging markets
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-accent" />
-            Capital partnerships aligned to long-term ownership
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="h-2 w-2 rounded-full bg-accent" />
-            Discretion, discipline, and operational rigor
+        <div className="space-y-5">
+          <p className="text-sm font-semibold text-sand">Proprietary edge</p>
+          <div className="space-y-4 text-sm text-sand/80 leading-relaxed">
+            <div className="flex gap-3">
+              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
+              <span>Proprietary intelligence across secondary and emerging markets</span>
+            </div>
+            <div className="flex gap-3">
+              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
+              <span>Capital partnerships aligned to long-term ownership</span>
+            </div>
+            <div className="flex gap-3">
+              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
+              <span>Discretion, discipline, and operational rigor</span>
+            </div>
           </div>
         </div>
       </Hero>
 
       <section className="section space-y-8">
         <div className="space-y-3">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/90">Value Proposition</p>
+          {/* Removed “Value Proposition” */}
           <h2 className="text-2xl font-semibold text-sand md:text-3xl">What sets HOLDRY apart</h2>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
