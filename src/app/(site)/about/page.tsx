@@ -4,7 +4,8 @@ import { Hero } from "@/components/Hero";
 
 export const metadata: Metadata = {
   title: "About HOLDRY",
-  description: "HOLDRY builds ownership in essential service businesses through intelligence, capital, and disciplined execution."
+  description:
+    "HOLDRY builds ownership in essential service businesses through intelligence, capital, and disciplined execution."
 };
 
 const thesisPoints = [
@@ -15,7 +16,7 @@ const thesisPoints = [
 ];
 
 const approachPoints = [
-  "We deploy Regional Vice Presidents into carefully selected markets",
+  "We partner with disciplined operators in carefully selected markets",
   "We provide proprietary deal flow, capital access, and operational support",
   "We build permanent ownership, not quick flips",
   "We win when our partners win"
@@ -47,6 +48,7 @@ export default function AboutPage() {
             ))}
           </ul>
         </div>
+
         <div className="card space-y-4">
           <h3 className="text-xl font-semibold text-sand">The Approach</h3>
           <ul className="space-y-3 text-sand/75">
@@ -71,9 +73,9 @@ export default function AboutPage() {
       </section>
 
       <CTASection
-        title="Connect with HOLDRY"
-        description="Whether you are evaluating an operator track or considering a sale, we are intentional about every conversation."
-        cta={{ href: "/contact", label: "Start the conversation" }}
+        title="Partner with HOLDRY"
+        description="If you’re a disciplined operator, apply to explore a HOLDRY-powered search."
+        cta={{ href: "/partner#apply", label: "Apply" }}
         subtle
       />
     </div>
