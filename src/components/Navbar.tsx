@@ -11,18 +11,18 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-charcoal/80 backdrop-blur">
       <div className="section flex items-center justify-between py-4">
-        {/* Logo / Home */}
+        {/* Brand / Home */}
         <Link
           href="/"
           aria-label="HOLDRY home"
           className="group flex items-center gap-3 tracking-tight"
         >
-          <span className="relative flex h-3.5 w-3.5 items-center justify-center">
-            <span className="absolute h-3.5 w-3.5 rounded-full bg-accent/25 blur-[6px] transition-opacity group-hover:opacity-100 opacity-70" />
+          <span className="relative flex h-4 w-4 items-center justify-center">
+            <span className="absolute h-4 w-4 rounded-full bg-accent/25 blur-[10px] opacity-80 transition-opacity group-hover:opacity-100" />
             <span className="relative h-3 w-3 rounded-full bg-accent" />
           </span>
 
-          <span className="text-xl font-semibold text-sand md:text-2xl">
+          <span className="text-2xl font-semibold text-sand md:text-3xl">
             HOLDRY
           </span>
         </Link>
