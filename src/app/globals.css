@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-charcoal text-sand min-h-screen font-sans antialiased;
+}
+
+a {
+  @apply transition-colors duration-200 ease-out;
+}
+
+a:hover {
+  @apply text-accent;
+}
+
+.section {
+  @apply max-w-6xl mx-auto px-6 py-16 md:py-20;
+}
+
+.card {
+  @apply bg-midnight/70 border border-white/5 rounded-2xl p-6 shadow-soft backdrop-blur;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-midnight shadow-soft transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-3 text-sm font-semibold text-sand transition-transform duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
+
+.gradient-bar {
+  background: linear-gradient(90deg, rgba(200, 90, 30, 0.8), rgba(200, 90, 30, 0.2));
+  height: 1px;
+  width: 100%;
+}
+
+.grid-fade {
+  background: radial-gradient(circle at 20% 20%, rgba(200, 90, 30, 0.15), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(200, 90, 30, 0.1), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(200, 90, 30, 0.08), transparent 30%);
+}
