@@ -38,7 +38,7 @@ export default function PartnerPage() {
       <Hero
         eyebrow="For Operators"
         title="Partner with HOLDRY"
-        description="A disciplined, ownership-first path to acquiring essential service businesses."
+        description="A selective, ownership-first path to acquiring essential service businesses."
         cta={{ href: "#apply", label: "Apply" }}
         secondaryCta={{ href: "/pricing", label: "View pricing" }}
       >
@@ -117,10 +117,19 @@ export default function PartnerPage() {
 
       <section className="section pb-20" id="apply">
         <div className="grid gap-8 md:grid-cols-2">
-          <ContactForm
-            title="Partner / HOLDRY-powered search"
-            description="Tell us where you are in the journey, what you want to acquire, and where you want to operate."
-          />
+          <div className="space-y-4">
+            <div className="card border border-white/10 bg-midnight/60">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent/80">Pricing</p>
+              <p className="mt-2 text-sand/75">
+                Partner pricing is monthly and set by request based on fit, scope, and market focus.
+              </p>
+            </div>
+
+            <ContactForm
+              title="Partner / HOLDRY-powered search"
+              description="Tell us where you are in the journey, what you want to acquire, and where you want to operate."
+            />
+          </div>
 
           <div className="card space-y-4">
             <h3 className="text-xl font-semibold text-sand">What happens next</h3>
