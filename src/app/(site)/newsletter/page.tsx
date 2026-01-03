@@ -1,6 +1,22 @@
+'use client'
+
 import Link from "next/link";
+import { useState } from "react";
+import { subscribeToNewsletter } from "@/app/actions/subscribe";
 
 export default function NewsletterPage() {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  async function handleSubmit(formData: FormData) {
+    setStatus('loading');
+    const result = await subscribeToNewsletter(formData);
+    if (result.success) {
+      setStatus('success');
+    } else {
+      setStatus('error');
+    }
+  }
+
   return (
     <div className="min-h-screen pb-20">
       {/* Hero Section */}
@@ -18,22 +34,25 @@ export default function NewsletterPage() {
             Free.
           </p>
 
-          {/* Dual Action Zone - Updated Email Collector */}
           <div className="flex flex-col items-center gap-6 pt-4">
-            <form className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
+            <form action={handleSubmit} className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
               <input
+                name="email"
                 type="email"
-                placeholder="Enter your email"
+                placeholder={status === 'success' ? "Welcome to the list!" : "Enter your email"}
                 required
-                className="w-full rounded-xl border border-white/10 bg-midnight/50 px-5 py-4 text-sand outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50"
+                disabled={status === 'success'}
+                className="w-full rounded-xl border border-white/10 bg-midnight/50 px-5 py-4 text-sand outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 disabled:opacity-50"
               />
               <button
                 type="submit"
-                className="btn-primary whitespace-nowrap px-8 py-4 font-bold"
+                disabled={status === 'loading' || status === 'success'}
+                className="btn-primary whitespace-nowrap px-8 py-4 font-bold disabled:opacity-50"
               >
-                See this week&apos;s
+                {status === 'loading' ? 'Joining...' : status === 'success' ? 'Added!' : "See this week's"}
               </button>
             </form>
+            {status === 'error' && <p className="text-red-400 text-xs">Something went wrong. Try again?</p>}
             <p className="text-xs text-sand/40 font-medium uppercase tracking-widest">
               Join to get immediate access to the current issue.
             </p>
@@ -50,7 +69,6 @@ export default function NewsletterPage() {
       {/* Value Prop Grid */}
       <section className="section py-16">
         <div className="grid gap-8 md:grid-cols-2">
-          {/* Column 1: The Newsletter Value */}
           <div className="card space-y-6 border border-white/5 bg-midnight/40 p-10">
             <h2 className="text-2xl font-bold text-sand">The Deal Breakdown</h2>
             <ul className="space-y-4">
@@ -71,7 +89,6 @@ export default function NewsletterPage() {
             </ul>
           </div>
 
-          {/* Column 2: The Holdry Platform Value (The Upsell) */}
           <div className="card space-y-6 border border-accent/20 bg-accent/5 p-10">
             <h2 className="text-2xl font-bold text-sand">The Full Platform</h2>
             <p className="text-sand/70">
@@ -92,7 +109,7 @@ export default function NewsletterPage() {
         </div>
       </section>
 
-      {/* Social Proof / Recent Issues */}
+      {/* Archive Section */}
       <section className="section py-10">
         <div className="rounded-[2rem] border border-white/5 bg-midnight/30 p-12 text-center">
           <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-sand/40 mb-8">
@@ -113,7 +130,7 @@ export default function NewsletterPage() {
         </div>
       </section>
 
-      {/* Final Personal Note - Updated Quote */}
+      {/* Founder Quote */}
       <section className="section py-16">
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-6 inline-block h-12 w-12 rounded-full bg-accent/20 p-2">
