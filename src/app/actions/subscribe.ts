@@ -1,7 +1,5 @@
 'use server'
 
-export const runtime = 'edge'; // Add this line
-
 export async function subscribeToNewsletter(formData: FormData) {
   const email = formData.get('email');
   
