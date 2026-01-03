@@ -30,7 +30,6 @@ export default function HomePage() {
         description="Access 5,000+ proprietary off-market targets enriched with AI intelligence, property ownership data, and historical SBA lender matches."
         cta={{ href: "/pricing", label: "See Pricing" }}
         secondaryCta={{ href: "/demo", label: "Demo" }}
-        trustLine="Trusted by search fund operators in 12 states"
       >
         <div className="space-y-4">
           <div className="flex items-center justify-between border-b border-white/5 pb-2">
@@ -66,7 +65,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The "Cheat Sheet" Strategy Card - Fixed apostrophes here */}
       <section className="section py-6">
         <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent/90">The Financing Advantage</p>
         <div className="card space-y-4 border-l-4 border-accent bg-accent/5">
@@ -78,7 +76,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The Data Edge (SaaS Pivot) Section */}
       <section className="section py-8">
         <div className="card group space-y-4 border border-white/10 p-12">
           <h3 className="text-3xl font-black text-sand">The Data Edge</h3>
@@ -97,18 +94,18 @@ export default function HomePage() {
             <Link href="/pricing" className="btn-primary inline-flex w-fit">View Searcher Plans</Link>
           </div>
 
-          <div className="card space-y-4 border border-white/5">
-            <h3 className="text-xl font-bold text-sand">For Business Owners</h3>
-            <p className="text-sand/75">Exit to a professional operator. We bring you pre-vetted buyers with verified financing data.</p>
-            <Link href="/sellers" className="btn-secondary inline-flex w-fit">Sell Your Business</Link>
+          <div className="card space-y-4 border border-accent/20 bg-accent/5">
+            <h3 className="text-xl font-bold text-sand">Enterprise Solutions</h3>
+            <p className="text-sand/75">Looking for custom data sets, unlimited deep-dives, or white-glove onboarding for your search fund? Let&apos;s build a custom plan.</p>
+            <Link href="/enterprise" className="btn-secondary inline-flex w-fit">Learn More</Link>
           </div>
         </div>
       </section>
 
       <CTASection
-        title="Enterprise Solutions"
-        description="Looking for custom data sets, unlimited deep-dives, or white-glove onboarding for your search fund? Let's build a custom plan."
-        cta={{ href: "/demo", label: "Book a Custom Info Call" }}
+        title="Ready to end the grind?"
+        description="Stop cold-calling and start closing. Pick a plan and get immediate access to your ClickUp workspace within 24 hours."
+        cta={{ href: "/pricing", label: "Get Started Now" }}
       />
     </div>
   );
