@@ -5,18 +5,18 @@ import { Hero } from "@/components/Hero";
 
 const pillars = [
   {
-    title: "Proprietary Deal Flow",
-    description: "Sourcing intelligence designed for disciplined search",
+    title: "Proprietary Off-Market Data",
+    description: "Access businesses that haven't hit BizBuySell yet, sourced through deep industry signals.",
     icon: <div className="h-3 w-3 rounded-full bg-accent" />
   },
   {
-    title: "Capital Access",
-    description: "Aligned capital pathways to close the right deal",
+    title: "SBA Lender Intelligence",
+    description: "Matched deals against our database of 893k loans to identify high-probability financing.",
     icon: <div className="h-3 w-3 rounded-full bg-accent" />
   },
   {
-    title: "Operational Playbooks",
-    description: "Frameworks and rigor for durable, long-term ownership",
+    title: "AI-Powered Deep Dives",
+    description: "Automated enrichment including property values, owner profiles, and seller readiness scores.",
     icon: <div className="h-3 w-3 rounded-full bg-accent" />
   }
 ];
@@ -25,53 +25,67 @@ export default function HomePage() {
   return (
     <div>
       <Hero
-        eyebrow="HOLDRY"
-        title="Build Ownership in Essential Businesses"
-        description="HOLDRY partners with disciplined operators to acquire and grow essential service companies across America."
-        cta={{ href: "/partner", label: "Partner with HOLDRY" }}
-        secondaryCta={{ href: "/pricing", label: "View pricing" }}
+        eyebrow="Proprietary Acquisition Intelligence"
+        title="Stop Wasting 200 Hours Cold-Calling Dead Leads"
+        description="Access 5,000+ proprietary off-market targets enriched with AI intelligence, property ownership data, and historical SBA lender matches. Move from 'Search' to 'LOI' faster."
+        cta={{ href: "/pricing", label: "See Pricing" }}
+        secondaryCta={{ href: "/demo", label: "Watch 3-Min Demo" }}
+        trustLine="Trusted by search fund operators in 12 states"
       >
-        <div className="space-y-5">
-          <div className="space-y-1">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent/90">HOLDRY-powered search</p>
-            <p className="text-lg font-semibold text-sand">Built for disciplined ownership</p>
-          </div>
-
-          <div className="space-y-4 text-sm text-sand/80 leading-relaxed">
-            <div className="flex gap-3">
-              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
-              <span>Proprietary intelligence across secondary and emerging markets</span>
-            </div>
-            <div className="flex gap-3">
-              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
-              <span>Capital partnerships aligned to long-term ownership</span>
-            </div>
-            <div className="flex gap-3">
-              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
-              <span>Discretion, discipline, and operational rigor</span>
+        {/* Mockup "Live Feed" component to demonstrate product value */}
+        <div className="space-y-4">
+          <div className="flex items-center justify-between border-b border-white/5 pb-2">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-accent">Real-Time Target Feed</span>
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] text-sand/40 italic">Syncing live signals</span>
+              <span className="flex h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
             </div>
           </div>
+          
+          <div className="space-y-3">
+            {[
+              { name: "Precision HVAC", revenue: "$2.4M", signal: "High", tag: "Off-Market" },
+              { name: "GreenScape Services", revenue: "$1.8M", signal: "SBA Match", tag: "Property Enriched" },
+              { name: "SafeState Security", revenue: "$3.1M", signal: "Direct", tag: "Owner-Verified" },
+            ].map((item, i) => (
+              <div key={i} className="group flex items-center justify-between rounded-xl bg-white/5 p-3 text-sm transition-colors hover:bg-white/10">
+                <div>
+                  <p className="font-bold text-sand">{item.name}</p>
+                  <p className="text-[11px] text-sand/40">{item.revenue} Revenue • {item.tag}</p>
+                </div>
+                <span className="rounded border border-accent/20 bg-accent/5 px-2 py-1 text-[9px] font-bold uppercase text-accent group-hover:bg-accent group-hover:text-white transition-all">
+                  {item.signal}
+                </span>
+              </div>
+            ))}
+          </div>
+          <p className="pt-2 text-center text-[10px] text-sand/30 italic">Displaying 3 of 5,482 verified opportunities</p>
         </div>
       </Hero>
 
       <section className="section space-y-8">
         <div className="space-y-3">
-          <h2 className="text-2xl font-semibold text-sand md:text-3xl">What sets HOLDRY apart</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-sand md:text-3xl">The Holdry Advantage</h2>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {pillars.map((pillar) => (
-            <FeatureCard key={pillar.title} icon={pillar.icon} title={pillar.title} description={pillar.description} />
+            <FeatureCard 
+              key={pillar.title} 
+              icon={pillar.icon} 
+              title={pillar.title} 
+              description={pillar.description} 
+            />
           ))}
         </div>
       </section>
 
       <section className="section space-y-4">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/90">What We Do</p>
-        <div className="card space-y-4">
-          <p className="text-lg text-sand/80">
-            HOLDRY is a private acquisition platform focused on systematically acquiring essential service businesses —
-            landscaping, pest control, HVAC, janitorial, security, and related industries — in secondary and emerging
-            markets nationwide.
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent/90">Our Core Focus</p>
+        <div className="card space-y-4 border-l-4 border-accent">
+          <p className="text-lg leading-relaxed text-sand/80">
+            Holdry is a private intelligence platform for systematically acquiring **essential service businesses** — 
+            landscaping, HVAC, plumbing, and janitorial — in secondary markets. We help you skip the public market 
+            noise and go direct to proprietary, financeable deal flow.
           </p>
         </div>
       </section>
@@ -79,38 +93,38 @@ export default function HomePage() {
       <section className="section space-y-6">
         <div className="flex items-center justify-between">
           <div className="space-y-3">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/90">Who We Work With</p>
-            <h2 className="text-2xl font-semibold text-sand md:text-3xl">Selective partnerships for both sides</h2>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent/90">Pathways</p>
+            <h2 className="text-2xl font-bold tracking-tight text-sand md:text-3xl">Built for those who execute</h2>
           </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="card space-y-3">
-            <h3 className="text-xl font-semibold text-sand">For Partners</h3>
+          <div className="card group space-y-4 border border-white/5 transition-all hover:border-accent/20">
+            <h3 className="text-xl font-bold text-sand">For Searchers & Funds</h3>
             <p className="text-sand/75">
-              Convert your skill and execution into permanent equity ownership with sourcing intelligence and aligned capital.
+              Stop digging through stale listings. Get a ClickUp workspace pre-populated with 5,000+ off-market targets and AI-enriched seller data.
             </p>
-            <Link href="/partner" className="btn-secondary inline-flex w-fit">
-              Explore Partner with HOLDRY
+            <Link href="/partner" className="btn-primary inline-flex w-fit">
+              View Searcher Plans
             </Link>
           </div>
 
-          <div className="card space-y-3">
-            <h3 className="text-xl font-semibold text-sand">For Sellers</h3>
+          <div className="card space-y-4 border border-white/5">
+            <h3 className="text-xl font-bold text-sand">For Business Owners</h3>
             <p className="text-sand/75">
-              Exit to a disciplined operator who respects what you have built and invests for the long term.
+              Exit to a professional operator. We skip the tire-kickers and bring you serious, pre-vetted buyers with verified financing.
             </p>
             <Link href="/sellers" className="btn-secondary inline-flex w-fit">
-              Learn about selling to HOLDRY
+              Sell Your Business
             </Link>
           </div>
         </div>
       </section>
 
       <CTASection
-        title="Ready to start?"
-        description="If you’re a serious operator, apply to partner with HOLDRY. If you’re a business owner, start a discreet conversation."
-        cta={{ href: "/partner#apply", label: "Apply" }}
+        title="Ready to end the grind?"
+        description="Stop cold-calling and start closing. Pick a plan and get immediate access to your ClickUp workspace within 24 hours."
+        cta={{ href: "/pricing", label: "Get Started Now" }}
       />
     </div>
   );
