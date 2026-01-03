@@ -66,14 +66,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The "Cheat Sheet" Strategy Card */}
+      {/* The "Cheat Sheet" Strategy Card - Fixed apostrophes here */}
       <section className="section py-6">
         <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-accent/90">The Financing Advantage</p>
         <div className="card space-y-4 border-l-4 border-accent bg-accent/5">
           <p className="text-xl font-bold text-sand">The Cheat Sheet for Low-Equity Acquisitions</p>
           <p className="text-lg leading-relaxed text-sand/80">
             We provide aggregate insights across nearly **one million SBA loans**, plus granular data from asset-based lenders and sale-leaseback firms. 
-            This isn't just data—it's a playbook for structuring acquisitions with minimal personal equity injection.
+            This isn&apos;t just data—it&apos;s a playbook for structuring acquisitions with minimal personal equity injection.
           </p>
         </div>
       </section>
