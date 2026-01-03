@@ -18,7 +18,7 @@ export default function NewsletterPage() {
             Free.
           </p>
 
-          {/* Dual Action Zone */}
+          {/* Dual Action Zone - Updated Email Collector */}
           <div className="flex flex-col items-center gap-6 pt-4">
             <form className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
               <input
@@ -31,11 +31,11 @@ export default function NewsletterPage() {
                 type="submit"
                 className="btn-primary whitespace-nowrap px-8 py-4 font-bold"
               >
-                Subscribe Free
+                See this week&apos;s
               </button>
             </form>
             <p className="text-xs text-sand/40 font-medium uppercase tracking-widest">
-              No credit card. No fluff. Just data.
+              Join to get immediate access to the current issue.
             </p>
             
             <div className="pt-4">
@@ -113,7 +113,7 @@ export default function NewsletterPage() {
         </div>
       </section>
 
-      {/* Final Personal Note */}
+      {/* Final Personal Note - Updated Quote */}
       <section className="section py-16">
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-6 inline-block h-12 w-12 rounded-full bg-accent/20 p-2">
@@ -121,10 +121,10 @@ export default function NewsletterPage() {
           </div>
           <h3 className="text-xl font-bold text-sand mb-4">A Note from the Founder</h3>
           <p className="text-sand/60 italic leading-relaxed">
-            &quot;I built Holdry because I was tired of seeing searchers burn 200 hours a month on 
-            BizBuySell garbage. Whether I&apos;m sharing a creative financing trick or addressing 
-            the latest industry drama, this newsletter is where I stay connected to the search 
-            community. I hope to see you in the inbox.&quot;
+            &quot;I built Holdry because I was tired of burning countless hours a month on 
+            BizBuySell garbage. Whether we&apos;re sharing a creative capital stack or 
+            addressing the latest industry trends, this newsletter is where I stay connected 
+            to the search community. See you in the inbox.&quot;
           </p>
         </div>
       </section>
