@@ -9,10 +9,16 @@ export default function NewsletterPage() {
 
   async function handleSubmit(formData: FormData) {
     setStatus('loading');
-    const result = await subscribeToNewsletter(formData);
-    if (result.success) {
-      setStatus('success');
-    } else {
+    try {
+      const result = await subscribeToNewsletter(formData);
+      // Added a defensive check to handle potential server/network crashes
+      if (result && result.success) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch (err) {
+      console.error("Subscription submission failed:", err);
       setStatus('error');
     }
   }
@@ -41,7 +47,7 @@ export default function NewsletterPage() {
                 type="email"
                 placeholder={status === 'success' ? "Welcome to the list!" : "Enter your email"}
                 required
-                disabled={status === 'success'}
+                disabled={status === 'success' || status === 'loading'}
                 className="w-full rounded-xl border border-white/10 bg-midnight/50 px-5 py-4 text-sand outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 disabled:opacity-50"
               />
               <button
@@ -52,7 +58,11 @@ export default function NewsletterPage() {
                 {status === 'loading' ? 'Joining...' : status === 'success' ? 'Added!' : "See this week's"}
               </button>
             </form>
-            {status === 'error' && <p className="text-red-400 text-xs">Something went wrong. Try again?</p>}
+            {status === 'error' && (
+              <p className="text-red-400 text-xs font-bold">
+                Submission failed. Please check your connection or try again.
+              </p>
+            )}
             <p className="text-xs text-sand/40 font-medium uppercase tracking-widest">
               Join to get immediate access to the current issue.
             </p>
@@ -130,7 +140,7 @@ export default function NewsletterPage() {
         </div>
       </section>
 
-      {/* Founder Quote */}
+      {/* Final Personal Note */}
       <section className="section py-16">
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-6 inline-block h-12 w-12 rounded-full bg-accent/20 p-2">
