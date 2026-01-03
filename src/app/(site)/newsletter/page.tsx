@@ -1,5 +1,9 @@
 'use client'
 
+// Add these two lines to force dynamic behavior on Cloudflare
+export const runtime = 'edge';
+export const dynamic = 'force-dynamic';
+
 import Link from "next/link";
 import { useState } from "react";
 import { subscribeToNewsletter } from "@/app/actions/subscribe";
