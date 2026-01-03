@@ -20,7 +20,7 @@ export default function EnterprisePage() {
         </div>
       </section>
 
-      {/* Benefits Grid - Sourced from Enterprise Card */}
+      {/* Benefits Grid */}
       <section className="section py-16">
         <div className="grid gap-6 md:grid-cols-3">
           {[
@@ -45,7 +45,7 @@ export default function EnterprisePage() {
         </div>
       </section>
 
-      {/* Intake / Calendly Placeholder Section */}
+      {/* Intake Section */}
       <section className="section py-10">
         <div className="mx-auto max-w-3xl rounded-[2.5rem] border border-accent/20 bg-accent/5 p-8 md:p-16 shadow-2xl">
           <div className="mb-10 text-center space-y-4">
@@ -77,17 +77,15 @@ export default function EnterprisePage() {
               </select>
             </div>
 
-            <div className="pt-6">
-              {/* This button currently acts as the bridge to Calendly */}
+            <div className="pt-6 text-center">
               <Link 
-                href="https://calendly.com/" 
-                target="_blank" 
+                href="mailto:noah@holdry.com?subject=Enterprise Consultation Inquiry" 
                 className="btn-primary flex w-full justify-center py-5 text-lg font-bold shadow-xl shadow-accent/20"
               >
-                Schedule with Holdry Sales →
+                Send Inquiry to Noah →
               </Link>
               <p className="mt-4 text-center text-xs text-sand/40 font-medium italic">
-                You will be redirected to schedule a 20-minute strategy call.
+                This will generate an email draft to Noah at Holdry.
               </p>
             </div>
           </form>
