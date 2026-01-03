@@ -28,7 +28,7 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link href="/login" className="btn-primary px-6 py-2">
+          <Link href="https://app.clickup.com/login" className="btn-primary px-6 py-2">
             Login
           </Link>
         </div>
