@@ -12,7 +12,7 @@ export function CTASection({ title, description, cta, subtle }: CTASectionProps)
     <section className="section">
       <div
         className={`card flex flex-col gap-6 rounded-3xl border border-white/5 ${
-          subtle ? "bg-midnight/50" : "bg-gradient-to-r from-midnight via-midnight/80 to-midnight"
+          subtle ? "bg-midnight/50" : "bg-gradient-to-r from-midnight via-midnight/80 to-charcoal"
         } p-8 md:flex-row md:items-center md:justify-between`}
       >
         <div className="space-y-3">

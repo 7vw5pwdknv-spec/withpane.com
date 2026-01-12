@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        charcoal: "#ffffff",
-        midnight: "#f3f4f6",
-        accent: "#c85a1e",
-        sand: "#1f2937"
+        charcoal: "#0b0b0b",
+        midnight: "#171717",
+        accent: "#9ca3af",
+        sand: "#f5f5f5"
       },
       fontFamily: {
         sans: ["Inter", "var(--font-inter)", "system-ui", "-apple-system", "sans-serif"]
