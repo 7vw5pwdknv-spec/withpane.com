@@ -2,7 +2,7 @@
 
 A Next.js 14 + Tailwind CSS marketing site for HOLDRY, a private acquisition platform helping Regional Vice Presidents acquire and operate essential service businesses across the United States.
 
-## Tech Stack 
+## Tech Stack
 - Next.js 14 (App Router, TypeScript)
 - Tailwind CSS for styling
 - Static marketing site ready for Vercel or Cloudflare Pages
