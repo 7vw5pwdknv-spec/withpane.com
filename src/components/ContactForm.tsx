@@ -20,7 +20,7 @@ export function ContactForm({ title, description }: ContactFormProps) {
             type="text"
             name="name"
             required
-            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand placeholder:text-sand/40 focus:border-accent focus:outline-none"
+            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand placeholder:text-sand/40 focus:border-white/40 focus:outline-none"
           />
         </label>
 
@@ -30,50 +30,50 @@ export function ContactForm({ title, description }: ContactFormProps) {
             type="email"
             name="email"
             required
-            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand placeholder:text-sand/40 focus:border-accent focus:outline-none"
+            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand placeholder:text-sand/40 focus:border-white/40 focus:outline-none"
           />
         </label>
 
         <label className="space-y-2 text-sm font-medium text-sand/80">
-          Phone
+          Organization
           <input
-            type="tel"
-            name="phone"
-            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand placeholder:text-sand/40 focus:border-accent focus:outline-none"
+            type="text"
+            name="organization"
+            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand placeholder:text-sand/40 focus:border-white/40 focus:outline-none"
           />
         </label>
 
         <label className="space-y-2 text-sm font-medium text-sand/80">
-          I am a
+          Inquiry Type
           <select
-            name="persona"
-            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand focus:border-accent focus:outline-none"
-            defaultValue="Partner candidate"
+            name="inquiry"
+            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand focus:border-white/40 focus:outline-none"
+            defaultValue="General inquiry"
           >
-            <option>Partner candidate</option>
-            <option>Active searcher (seeking acquisition)</option>
-            <option>Investor / lender / advisor</option>
-            <option>Other</option>
+            <option>General inquiry</option>
+            <option>Operating company</option>
+            <option>Investment / capital partner</option>
+            <option>Press or partnerships</option>
           </select>
         </label>
 
         <label className="md:col-span-2 space-y-2 text-sm font-medium text-sand/80">
-          LinkedIn or Website
+          Website
           <input
             type="url"
             name="link"
             placeholder="https://"
-            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand placeholder:text-sand/40 focus:border-accent focus:outline-none"
+            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand placeholder:text-sand/40 focus:border-white/40 focus:outline-none"
           />
         </label>
 
         <label className="md:col-span-2 space-y-2 text-sm font-medium text-sand/80">
-          Brief Background
+          Message
           <textarea
-            name="background"
+            name="message"
             rows={4}
-            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand placeholder:text-sand/40 focus:border-accent focus:outline-none"
-            placeholder="Share relevant experience, target industries, and the market(s) you want to operate in."
+            className="w-full rounded-lg border border-white/10 bg-charcoal/70 px-3 py-3 text-sand placeholder:text-sand/40 focus:border-white/40 focus:outline-none"
+            placeholder="Share what you'd like to discuss with the Holdry team."
           />
         </label>
       </div>

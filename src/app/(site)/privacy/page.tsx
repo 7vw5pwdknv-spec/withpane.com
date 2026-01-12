@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | HOLDRY",
-  description: "Privacy policy for HOLDRY marketing site."
+  description: "Privacy policy for the Holdry holding company website."
 };
 
 export default function PrivacyPage() {
   return (
     <section className="section space-y-6">
       <div className="space-y-2">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/90">Legal</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sand/50">Legal</p>
         <h1 className="text-3xl font-semibold text-sand">Privacy Policy</h1>
         <p className="text-sand/70">Effective date: December 2024</p>
       </div>

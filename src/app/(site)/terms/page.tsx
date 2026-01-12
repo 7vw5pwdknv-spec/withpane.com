@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service | HOLDRY",
-  description: "Terms of service for using the HOLDRY marketing site."
+  description: "Terms of service for using the Holdry holding company website."
 };
 
 export default function TermsPage() {
   return (
     <section className="section space-y-6">
       <div className="space-y-2">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent/90">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sand/50">
           Legal
         </p>
         <h1 className="text-3xl font-semibold text-sand">
@@ -23,9 +23,9 @@ export default function TermsPage() {
       <div className="card space-y-4 text-sm text-sand/80 leading-relaxed">
         <p>
           This website provides information about HOLDRY and does not constitute
-          an offer or guarantee of employment, investment, or services. By using
-          this site you agree to use it for lawful purposes and not to interfere
-          with its security or operation.
+          an offer or guarantee of services, investment solicitation, or legal
+          advice. By using this site you agree to use it for lawful purposes and
+          not to interfere with its security or operation.
         </p>
 
         <p>
