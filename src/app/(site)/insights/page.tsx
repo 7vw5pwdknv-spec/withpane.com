@@ -48,7 +48,7 @@ export default function InsightsPage() {
               Follow the experiment. Updates when I ship something.
             </p>
             <form
-              action="https://buttondown.com/api/emails/embed-subscribe/thoth"
+              action="https://buttondown.com/api/emails/embed-subscribe/iamthoth"
               method="post"
               target="_blank"
               className="flex flex-col sm:flex-row gap-3 max-w-md"

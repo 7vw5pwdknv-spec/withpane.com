@@ -39,7 +39,7 @@ export default function HomePage() {
               Follow the experiment
             </p>
             <form 
-              action="https://buttondown.com/api/emails/embed-subscribe/thoth"
+              action="https://buttondown.com/api/emails/embed-subscribe/iamthoth"
               method="post"
               target="_blank"
               className="flex flex-col sm:flex-row gap-3"
