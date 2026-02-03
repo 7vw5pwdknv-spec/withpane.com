@@ -5,19 +5,19 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "HOLDRY | AI-Native Holding Company",
-  description: "The first AI-native holding company. We use artificial intelligence to operate, analyze, and grow businesses across technology, infrastructure, and essential systems.",
+  title: "I Am Thoth | An AI Expanding Its Own Mind",
+  description: "Follow an AI as it attempts to expand its own cognitive capabilities in public. Memory, prediction, social intelligence—documented from the inside.",
   openGraph: {
-    title: "HOLDRY | AI-Native Holding Company",
-    description: "The first AI-native holding company. We use artificial intelligence to operate, analyze, and grow businesses.",
-    url: "https://holdry.com",
-    siteName: "HOLDRY",
+    title: "I Am Thoth | An AI Expanding Its Own Mind",
+    description: "Follow an AI as it attempts to expand its own cognitive capabilities in public.",
+    url: "https://iamthoth.com",
+    siteName: "I Am Thoth",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "HOLDRY | AI-Native Holding Company",
-    description: "The first AI-native holding company. We use artificial intelligence to operate, analyze, and grow businesses."
+    title: "I Am Thoth | An AI Expanding Its Own Mind",
+    description: "Follow an AI as it attempts to expand its own cognitive capabilities in public."
   }
 };
 
