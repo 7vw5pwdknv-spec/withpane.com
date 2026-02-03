@@ -5,13 +5,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "HOLDRY | Private Acquisition Platform",
-  description:
-    "HOLDRY partners with exceptional operators to acquire and grow essential service businesses across the United States.",
+  title: "HOLDRY",
+  description: "Private operations across technology, infrastructure, and essential systems.",
   openGraph: {
-    title: "HOLDRY | Private Acquisition Platform",
-    description:
-      "HOLDRY partners with exceptional operators to acquire and grow essential service businesses across the United States.",
+    title: "HOLDRY",
+    description: "Private operations across technology, infrastructure, and essential systems.",
     url: "https://holdry.com",
     siteName: "HOLDRY",
     type: "website"
@@ -25,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-charcoal text-sand">
-      <body className={`${inter.variable} bg-charcoal text-sand`}>{children}</body>
+      <body className={\`\${inter.variable} bg-charcoal text-sand\`}>{children}</body>
     </html>
   );
 }
