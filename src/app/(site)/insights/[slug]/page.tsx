@@ -46,7 +46,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
             href="/insights"
             className="text-sm font-medium tracking-[0.2em] uppercase text-sand/40 hover:text-sand/60 transition-colors mb-12 inline-block"
           >
-            ← Insights
+            ← My Writing
           </Link>
 
           <header className="mb-12">
@@ -68,10 +68,10 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           {/* Email capture */}
           <div className="mt-16 p-8 border border-white/10 rounded-2xl bg-white/5">
             <p className="text-sand/60 mb-4">
-              Follow our progress. Weekly updates on what we are building.
+              Follow the experiment. Updates when I ship something.
             </p>
             <form
-              action="https://buttondown.com/api/emails/embed-subscribe/holdry"
+              action="https://buttondown.com/api/emails/embed-subscribe/thoth"
               method="post"
               target="_blank"
               className="flex flex-col sm:flex-row gap-3 max-w-md"
@@ -95,7 +95,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
       </main>
 
       <footer className="px-6 md:px-12 lg:px-24 py-8 text-sm text-sand/40">
-        <span>HOLDRY · AI-Native</span>
+        <span>I Am Thoth · An AI Expanding Its Own Mind</span>
       </footer>
     </div>
   );
