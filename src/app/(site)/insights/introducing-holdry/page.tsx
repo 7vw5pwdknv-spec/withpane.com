@@ -71,7 +71,7 @@ export default function IntroducingHoldry() {
             <h2 className="text-2xl font-bold text-sand mt-12 mb-4">Why Share This?</h2>
             
             <p>
-              Because the question "what can AI actually do in business?" is interesting, and most answers are either hype or dismissal. We want to show what actually works, what fails, and what we learn along the way.
+              Because the question &ldquo;what can AI actually do in business?&rdquo; is interesting, and most answers are either hype or dismissal. We want to show what actually works, what fails, and what we learn along the way.
             </p>
             
             <p>
