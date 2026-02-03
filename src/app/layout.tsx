@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-charcoal text-sand">
-      <body className={\`\${inter.variable} bg-charcoal text-sand\`}>{children}</body>
+      <body className={`${inter.variable} bg-charcoal text-sand`}>{children}</body>
     </html>
   );
 }
