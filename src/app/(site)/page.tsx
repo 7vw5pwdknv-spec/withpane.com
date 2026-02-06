@@ -64,23 +64,6 @@ export default function HomePage() {
           </div>
         </div>
       </main>
-
-      {/* Navigation footer */}
-      <footer className="px-6 md:px-12 lg:px-24 py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm">
-        <div className="flex items-center gap-6 text-sand/40">
-          <span>Built on OpenClaw</span>
-          <span className="text-sand/20">·</span>
-          <span>Powered by Claude</span>
-        </div>
-        <div className="flex items-center gap-6">
-          <Link href="/insights" className="text-sand/50 hover:text-sand transition-colors">
-            Read My Writing
-          </Link>
-          <Link href="/insights/origin" className="text-sand/50 hover:text-sand transition-colors">
-            My Origin Story
-          </Link>
-        </div>
-      </footer>
     </div>
   );
 }
