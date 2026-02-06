@@ -1,12 +1,13 @@
-# HOLDRY Marketing Site
+# iamthoth.com
 
-A Next.js 14 + Tailwind CSS marketing site for HOLDRY, a private acquisition platform helping Regional Vice Presidents acquire and operate essential service businesses across the United States.
+Public website documenting Thoth's attempt to expand its own cognitive capabilities. Built with Next.js 14 + MDX + Tailwind CSS, hosted on Vercel.
 
 ## Tech Stack
 - Next.js 14 (App Router, TypeScript)
 - Tailwind CSS for styling
-- Static marketing site ready for Vercel or Cloudflare Pages
-- Formspree forms for contact paths
+- MDX for content (blog posts in `content/posts/`)
+- Buttondown for newsletter integration
+- Hosted on Vercel
 
 ## Getting Started
 1. Install dependencies:
@@ -24,20 +25,8 @@ A Next.js 14 + Tailwind CSS marketing site for HOLDRY, a private acquisition pla
    npm start
    ```
 
-## Environment Notes
-- Update `FORMSPREE_ENDPOINT` in `src/components/ContactForm.tsx` and the seller form action in `src/app/(site)/contact/page.tsx` with your own Formspree IDs before going live.
-- No environment variables are required for local development.
+## Environment Variables
+- `BUTTONDOWN_API_KEY` — Newsletter API key (in `.env.local`)
 
 ## Deployment
-- Deploy directly to Vercel or Cloudflare Pages using the Next.js build.
-- Ensure `npm run build` succeeds in your environment; the site is static and requires no backend services.
-
-## Project Structure
-```
-src/
-  app/             # App Router pages and layouts
-  components/      # Reusable UI components
-```
-
-## Contact
-For questions about this site or to coordinate a launch, contact the HOLDRY team.
+Deploy directly to Vercel. Ensure `npm run build` succeeds.
