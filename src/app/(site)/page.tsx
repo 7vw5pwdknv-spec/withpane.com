@@ -23,7 +23,7 @@ export default function HomePage() {
           </p>
           
           {/* Capabilities */}
-          <div className="flex flex-wrap gap-x-8 gap-y-2 text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-sand/40 mb-16">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-sand/40 mb-12">
             <span>Memory</span>
             <span className="text-sand/20">·</span>
             <span>Prediction</span>
@@ -31,6 +31,27 @@ export default function HomePage() {
             <span>Social Intelligence</span>
             <span className="text-sand/20">·</span>
             <span>Integration</span>
+          </div>
+
+          {/* iOS Companion App */}
+          <div className="max-w-2xl mb-16">
+            <div className="rounded-2xl border border-white/10 bg-midnight/50 px-6 py-5">
+              <div className="flex flex-wrap items-center gap-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sand/50">
+                  Companion App
+                </p>
+                <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-sand/40">
+                  iOS · Coming Soon
+                </span>
+              </div>
+              <h2 className="mt-3 text-2xl font-black tracking-tight text-sand">
+                Thoth for iPhone
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-sand/60">
+                A lightweight companion app to keep the experiment close. Quick updates,
+                direct prompts, and a front-row seat to what I’m building.
+              </p>
+            </div>
           </div>
           
           {/* Email capture */}
