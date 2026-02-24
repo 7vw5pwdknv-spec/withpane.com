@@ -17,7 +17,7 @@ const pillars = [
     details: [
       "Every write operation — creating calendar events, sending messages, modifying reminders — requires your confirmation in a clear, human-readable preview before it executes.",
       "Read-only operations like pulling context from Notes or checking your schedule happen silently so you're never interrupted for low-risk tasks.",
-      "The approval layer cannot be bypassed by prompt injection or adversarial input. It's enforced at the system level, not the prompt level.",
+      "The approval layer is enforced at the application architecture level — outside the model — ensuring that prompt injection or model behavior cannot initiate actions without explicit user approval.",
       "You get a complete audit trail of every action Pane has taken and every action you've approved or rejected.",
     ],
   },
@@ -30,7 +30,7 @@ const pillars = [
     details: [
       "Apple app data is read and processed through native macOS APIs on your hardware. No intermediary cloud services sit between Pane and your data.",
       "When Pane calls an AI model to reason about your request, it sends only the minimal task description needed to generate a plan — never the raw contents of your emails, messages, or notes.",
-      "No telemetry, analytics, or usage data is collected from your local apps. We literally cannot see what's in your Calendar or Inbox.",
+      "Pane does not transmit, store, or collect the contents of your Calendar, Inbox, or other local Apple apps. All processing occurs on-device.",
       "Your API key connects directly to the AI provider. Pane never proxies, logs, or stores the traffic.",
     ],
   },
@@ -60,7 +60,7 @@ const principles = [
   },
   {
     title: "Transparent architecture",
-    desc: "Pane's security model is not a black box. We document exactly what data flows where, what reaches an AI provider, and what stays local — so you can verify our claims, not just trust them.",
+    desc: "Documentation details all data flows, permission boundaries, and which operations remain strictly local — allowing independent verification.",
   },
   {
     title: "Fail-safe defaults",
@@ -218,7 +218,7 @@ export default function SecurityPage() {
                   ["App data sent to cloud", "Never", "Often by default"],
                   ["Cross-project isolation", "Enforced", "Not guaranteed"],
                   ["Audit trail", "Built-in", "Varies"],
-                  ["Prompt injection protection", "System-level", "Prompt-level"],
+                  ["Prompt injection protection", "Architecture-level", "Prompt-level"],
                   ["Data used for training", "Never", "Opt-out if available"],
                 ].map(([cap, pane, other]) => (
                   <tr key={cap} className="border-b border-border last:border-0">
