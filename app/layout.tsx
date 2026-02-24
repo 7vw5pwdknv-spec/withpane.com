@@ -40,11 +40,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${dmSans.variable} ${dmMono.variable} font-sans antialiased`}>
-        {/* Ambient glow */}
+      <body
+        className={`${dmSans.variable} ${dmMono.variable} font-sans antialiased`}
+      >
+        {/* Ambient glow — layered for depth */}
         <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[40vh] left-1/2 -translate-x-1/2 w-[120vw] h-[80vh] rounded-full bg-accent/[0.07] blur-[120px]" />
-          <div className="absolute top-[20vh] -right-[20vw] w-[60vw] h-[60vh] rounded-full bg-accent/[0.04] blur-[100px]" />
+          <div className="absolute -top-[40vh] left-1/2 -translate-x-1/2 w-[120vw] h-[80vh] rounded-full bg-accent/[0.06] blur-[140px]" />
+          <div className="absolute top-[30vh] -right-[25vw] w-[50vw] h-[50vh] rounded-full bg-accent-2/[0.03] blur-[120px]" />
+          <div className="absolute top-[70vh] -left-[15vw] w-[40vw] h-[40vh] rounded-full bg-accent-3/[0.02] blur-[100px]" />
         </div>
         <Nav />
         <main className="min-h-screen">{children}</main>
