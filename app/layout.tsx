@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 
@@ -52,6 +53,7 @@ export default function RootLayout({
         <Nav />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
