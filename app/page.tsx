@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { GlassCard } from "./components/GlassCard";
 
 const features = [
@@ -193,6 +194,11 @@ export default function Home() {
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
             Execution with control, not blind autonomy.
           </h2>
+          <p className="mt-4 text-text-muted max-w-2xl">
+            <Link href="/security" className="text-accent hover:underline underline-offset-4 transition-colors">
+              Read our full security architecture &rarr;
+            </Link>
+          </p>
           <div className="mt-10 grid sm:grid-cols-2 gap-5">
             {[
               {

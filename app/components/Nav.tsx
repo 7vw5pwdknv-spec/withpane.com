@@ -12,15 +12,23 @@ export function Nav() {
         >
           Pane
         </Link>
-        <a
-          href="#waitlist"
-          className="px-5 py-2.5 rounded-full text-sm font-semibold
-            bg-accent/10 text-accent border border-accent/30
-            hover:bg-accent/20 hover:border-accent/50
-            transition-all duration-200"
-        >
-          Join Beta
-        </a>
+        <div className="flex items-center gap-6">
+          <Link
+            href="/security"
+            className="text-sm font-medium text-text-muted hover:text-text transition-colors duration-200"
+          >
+            Security
+          </Link>
+          <a
+            href="#waitlist"
+            className="px-5 py-2.5 rounded-full text-sm font-semibold
+              bg-accent/10 text-accent border border-accent/30
+              hover:bg-accent/20 hover:border-accent/50
+              transition-all duration-200"
+          >
+            Join Beta
+          </a>
+        </div>
       </div>
     </nav>
   );

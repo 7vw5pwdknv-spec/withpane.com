@@ -9,6 +9,12 @@ export function Footer() {
         </span>
         <div className="flex gap-6">
           <Link
+            href="/security"
+            className="text-sm text-text-subtle hover:text-text-muted transition-colors"
+          >
+            Security
+          </Link>
+          <Link
             href="/privacy"
             className="text-sm text-text-subtle hover:text-text-muted transition-colors"
           >
